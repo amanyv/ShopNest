@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cart - ShopNest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">ShopNest</div>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="cart.html">Cart</a></li>
+    <li><a href="login.html">Login</a></li>
+    <li><a href="signup.html">Signup</a></li>
+  </ul>
+</nav>
+
+<h2 style="text-align:center; margin-top:20px;">Your Cart</h2>
+
+<div id="cart-container"></div>
+
+<h3 style="text-align:center;">Total: ₹<span id="total">0</span></h3>
+
+<div style="text-align:center; margin:20px;">
+  <button onclick="goToCheckout()">Proceed to Checkout</button>
+</div>
+
+<script src="script.js"></script>
+<script>
+  loadCart();
+</script>
+
+</body>
+</html>
