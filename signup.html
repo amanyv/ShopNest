@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShopNest</title>
+  <title>Signup - ShopNest</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,11 +17,17 @@
   </div>
 </nav>
 
-<section class="banner">
-  <h1>Welcome to ShopNest</h1>
-  <p>Your simple and smart shopping destination</p>
-  <button class="shop-btn" onclick="goProducts()">Shop Now</button>
-</section>
+<h2 style="text-align:center; margin-top:20px;">Create Account</h2>
+
+<div class="checkout-box">
+  <input id="name" placeholder="Full Name">
+  <input id="email" placeholder="Email">
+  <input id="password" type="password" placeholder="Password">
+
+  <button onclick="signup()">Sign Up</button>
+
+  <p id="message" style="color:green; font-weight:bold;"></p>
+</div>
 
 <script src="script.js"></script>
 </body>

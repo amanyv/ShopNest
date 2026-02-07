@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ShopNest</title>
+  <title>Checkout - ShopNest</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,11 +17,19 @@
   </div>
 </nav>
 
-<section class="banner">
-  <h1>Welcome to ShopNest</h1>
-  <p>Your simple and smart shopping destination</p>
-  <button class="shop-btn" onclick="goProducts()">Shop Now</button>
-</section>
+<h2 style="text-align:center; margin-top:20px;">Checkout</h2>
+
+<div class="checkout-box">
+  <h3>Delivery Details</h3>
+
+  <input id="name" placeholder="Full Name">
+  <input id="address" placeholder="Full Address">
+  <input id="phone" placeholder="Phone Number">
+
+  <button onclick="placeOrder()">Place Order</button>
+
+  <p id="message" style="color:green; font-weight:bold;"></p>
+</div>
 
 <script src="script.js"></script>
 </body>

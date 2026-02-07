@@ -8,18 +8,18 @@
 
 <nav>
   <div class="logo">ShopNest</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="cart.html">Cart</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="signup.html">Signup</a></li>
-  </ul>
+  <div class="nav-buttons">
+    <button onclick="goHome()">Home</button>
+    <button onclick="goProducts()">Products</button>
+    <button onclick="goCart()">Cart</button>
+    <button onclick="goLogin()">Login</button>
+    <button onclick="goSignup()">Signup</button>
+  </div>
 </nav>
 
 <h2 style="text-align:center; margin-top:20px;">Our Products</h2>
 
-<div id="product-container"></div>
+<div id="product-container" class="grid"></div>
 
 <script src="script.js"></script>
 <script>

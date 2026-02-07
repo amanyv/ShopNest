@@ -8,23 +8,23 @@
 
 <nav>
   <div class="logo">ShopNest</div>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="cart.html">Cart</a></li>
-    <li><a href="login.html">Login</a></li>
-    <li><a href="signup.html">Signup</a></li>
-  </ul>
+  <div class="nav-buttons">
+    <button onclick="goHome()">Home</button>
+    <button onclick="goProducts()">Products</button>
+    <button onclick="goCart()">Cart</button>
+    <button onclick="goLogin()">Login</button>
+    <button onclick="goSignup()">Signup</button>
+  </div>
 </nav>
 
 <h2 style="text-align:center; margin-top:20px;">Your Cart</h2>
 
-<div id="cart-container"></div>
+<div id="cart-container" class="grid"></div>
 
-<h3 style="text-align:center;">Total: ₹<span id="total">0</span></h3>
+<h3 style="text-align:center;">Total: ₹<span id="total-price">0</span></h3>
 
 <div style="text-align:center; margin:20px;">
-  <button onclick="goToCheckout()">Proceed to Checkout</button>
+  <button onclick="goCheckout()">Proceed to Checkout</button>
 </div>
 
 <script src="script.js"></script>
