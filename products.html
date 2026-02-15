@@ -8,16 +8,47 @@
 
 <nav>
   <div class="logo">ShopNest</div>
+
   <div class="nav-buttons">
     <button onclick="goHome()">Home</button>
     <button onclick="goProducts()">Products</button>
     <button onclick="goCart()">Cart</button>
-    <button onclick="goLogin()">Login</button>
-    <button onclick="goSignup()">Signup</button>
+
+    <div id="auth-buttons">
+      <button onclick="goLogin()">Login</button>
+      <button onclick="goSignup()">Signup</button>
+    </div>
+
+    <div class="user-menu" id="user-menu">
+      <button class="user-btn" onclick="toggleMenu()">
+        <span id="username">User</span> ▼
+      </button>
+
+      <div class="dropdown" id="dropdown">
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
   </div>
 </nav>
 
 <h2 style="text-align:center; margin-top:20px;">Our Products</h2>
+
+<div class="search-wrapper">
+
+  <div class="search-box">
+    <span class="search-icon">🔍</span>
+    <input 
+      type="text" 
+      id="searchBox" 
+      placeholder="Search products..."
+      onkeyup="searchProducts(); showSuggestions()"
+      autocomplete="off"
+    >
+  </div>
+
+  <div id="suggestions" class="suggestions"></div>
+
+</div>
 
 <div id="product-container" class="grid"></div>
 

@@ -8,19 +8,36 @@
 
 <nav>
   <div class="logo">ShopNest</div>
+
   <div class="nav-buttons">
     <button onclick="goHome()">Home</button>
     <button onclick="goProducts()">Products</button>
     <button onclick="goCart()">Cart</button>
-    <button onclick="goLogin()">Login</button>
-    <button onclick="goSignup()">Signup</button>
+
+    <div id="auth-buttons">
+      <button onclick="goLogin()">Login</button>
+      <button onclick="goSignup()">Signup</button>
+    </div>
+
+    <div class="user-menu" id="user-menu">
+      <button class="user-btn" onclick="toggleMenu()">
+        <span id="username">User</span> ▼
+      </button>
+
+      <div class="dropdown" id="dropdown">
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
   </div>
 </nav>
 
 <section class="banner">
   <h1>Welcome to ShopNest</h1>
-  <p>Your simple and smart shopping destination</p>
+
+  <p id="welcome"></p>
+
   <button class="shop-btn" onclick="goProducts()">Shop Now</button>
+
 </section>
 
 <script src="script.js"></script>
