@@ -1,20 +1,51 @@
 [
   {
     "id": 1,
-    "name": "Wireless Headphones",
-    "price": 999,
-    "image": "images/Headphone.jpg"
+    "name": "Headphone",
+    "price": 1999,
+    "image": "images/Headphone.jpg",
+    "category": "Electronics"
   },
   {
     "id": 2,
-    "name": "Smart Watch",
-    "price": 1999,
-    "image": "images/Watch.jpg"
+    "name": "Watch",
+    "price": 2999,
+    "image": "images/Watch.jpg",
+    "category": "Accessories"
   },
   {
     "id": 3,
-    "name": "Bluetooth Speaker",
+    "name": "Speaker",
     "price": 1499,
-    "image": "images/Speaker.jpg"
+    "image": "images/Speaker.jpg",
+    "category": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "T-Shirt",
+    "price": 299,
+    "image": "images/T-Shirt.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "jeans",
+    "price": 499,
+    "image": "images/jeans.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 6,
+    "name": "Shoes",
+    "price": 999,
+    "image": "images/Shoes.jpg",
+    "category": "Clothing"
+  },
+  {
+    "id": 7,
+    "name": "Backpack",
+    "price": 999,
+    "image": "images/Laptop-Bag.jpg",
+    "category": "Accessories"
   }
 ]
