@@ -34,22 +34,46 @@ function loadProducts() {
   fetch("products.json")
     .then((r) => r.json())
     .then((products) => {
-      const container = document.getElementById("product-container");
-      container.innerHTML = "";
 
-      products.forEach((product) => {
-        const card = document.createElement("div");
-        card.className = "product-card";
+      allProducts = products;
+      displayProducts(allProducts);
 
-        card.innerHTML = `
-          <img src="${product.image}" alt="${product.name}">
-          <h3>${product.name}</h3>
-          <p>₹${product.price}</p>
-          <button onclick='addToCart(${JSON.stringify(product)})'>Add to Cart</button>
-        `;
-        container.appendChild(card);
-      });
+      const categoryFilter = document.getElementById("categoryFilter");
+
+      if (categoryFilter) {
+        categoryFilter.addEventListener("change", function () {
+          const selectedCategory = this.value;
+
+          if (selectedCategory === "all") {
+            displayProducts(allProducts);
+          } else {
+            const filtered = allProducts.filter(product =>
+              product.category === selectedCategory
+            );
+            displayProducts(filtered);
+          }
+        });
+      }
     });
+}
+
+function displayProducts(products) {
+  const container = document.getElementById("product-container");
+  container.innerHTML = "";
+
+  products.forEach((product) => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+      <h3>${product.name}</h3>
+      <p>₹${product.price}</p>
+      <button onclick='addToCart(${JSON.stringify(product)})'>Add to Cart</button>
+    `;
+
+    container.appendChild(card);
+  });
 }
 
 function searchProducts() {
